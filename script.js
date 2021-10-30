@@ -1,18 +1,19 @@
 const linksSocialMedia = {
-  github: 'Pedrinhk',
+  github: 'phquintiliano',
   facebook: 'pedrohquintiliano',
   instagram: 'quintiliano_ph',
-  twitter: 'Pedro_LaikUS'
+  twitter: 'phquintilianoo',
+  linkedin: '/in/phquintiliano'
 }
 
-function chanheSocialMediaLinks() {
+function changeSocialMediaLinks() {
   for (let li of socialLinks.children) {
     const social = li.getAttribute('class')
 
     li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
   }
 }
-chanheSocialMediaLinks()
+changeSocialMediaLinks()
 
 function getGitHubProfileInfos() {
   const url = `https://api.github.com/users/${linksSocialMedia.github}`
